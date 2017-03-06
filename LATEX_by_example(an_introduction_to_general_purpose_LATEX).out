@@ -32,7 +32,7 @@
 \BOOKMARK [2][-]{subsection.4.4}{... .. ....}{section.4}% 32
 \BOOKMARK [2][-]{subsection.4.5}{... ....}{section.4}% 33
 \BOOKMARK [2][-]{subsection.4.6}{. ....}{section.4}% 34
-\BOOKMARK [2][-]{subsection.4.7}{.../... .....}{section.4}% 35
+\BOOKMARK [2][-]{subsection.4.7}{.../... ....}{section.4}% 35
 \BOOKMARK [1][-]{section.5}{Advanced Mathematics}{}% 36
 \BOOKMARK [2][-]{subsection.5.1}{Equation numbering}{section.5}% 37
 \BOOKMARK [3][-]{subsubsection.5.1.1}{Equation numbering}{subsection.5.1}% 38
@@ -43,3 +43,10 @@
 \BOOKMARK [2][-]{subsection.5.3}{Formatting Equations}{section.5}% 43
 \BOOKMARK [3][-]{subsubsection.5.3.1}{color}{subsection.5.3}% 44
 \BOOKMARK [3][-]{subsubsection.5.3.2}{Fonts}{subsection.5.3}% 45
+\BOOKMARK [1][-]{section.6}{Advanced use of LaTeX}{}% 46
+\BOOKMARK [2][-]{subsection.6.1}{customize marking}{section.6}% 47
+\BOOKMARK [3][-]{subsubsection.6.1.1}{footnote}{subsection.6.1}% 48
+\BOOKMARK [3][-]{subsubsection.6.1.2}{section}{subsection.6.1}% 49
+\BOOKMARK [2][-]{subsection.6.2}{referencing}{section.6}% 50
+\BOOKMARK [2][-]{subsection.6.3}{algorithms}{section.6}% 51
+\BOOKMARK [2][-]{subsection.6.4}{source code}{section.6}% 52
