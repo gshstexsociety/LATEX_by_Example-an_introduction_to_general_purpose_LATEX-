@@ -589,6 +589,7 @@
 		\(\overline{abc}\) & \textbackslash overline\{abc\}& \(\vec{v}\) & \textbackslash vec\{v\} \\
 		\hline
 	\end{tabularx} 
+	\clearpage
 	\section{여러가지 요소삽입}
 	\subsection{이번장의 목표}
 	\begin{itemize}
@@ -616,19 +617,160 @@
 		\textbackslash listoftables\\
 		\hline
 	\end{tabularx}
-	\clearpage
 	\subsection{각주 삽입하기}
 	각주 입력하기는 매우 쉽다.\\
+	
 	\begin{tabularx}{\textwidth \onehalfspacing}{|X|X|}
 		\hline
 		Where is footnote?\textbackslash footnote\{Here it is!\}&Where is footnote? \footnote{Here it is!}\\
 		\hline
 	\end{tabularx}
 	\newline\newline
-	
+	각주 입력하기는 매우 쉽다. 하지만 여러분은 각주의 위치에 주의 해야 한다. 각주는 \textbf{마지막 텍스트} 다음 줄에 위치하게 된다. 그럼으로 만약 각주가 페이지 가장 밑에 있기를 원한다면 그 페이지 마지막 문장 다음에 \textbackslash clearpage를 해주는 것이 좋다.\clearpage
 	\subsection{아이템 열거 삽입하기}
+	매장 시작마다 여러분은 단원을 나열한 리스트를 볼 수가 있었을 것이다.이와 같은 아이템 리스트 들은 다음과 같이 서식 할 수가 있다.\newline
+	
+	\begin{tabularx}{\textwidth \onehalfspacing}{|X|X|}
+		\hline
+		\textbackslash begin\{itemize\}
+		
+		\ \ \ \ \ \ \textbackslash item Chocola
+		
+		\ \ \ \ \ \ \textbackslash item Vanilla
+		
+		\ \ \ \ \ \ \textbackslash item Maple
+		
+		\textbackslash end\{itemize\}
+		&
+		\begin{itemize}
+			\item Chocola
+			\item Vanilla
+			\item Maple
+		\end{itemize}
+		\\
+		\hline
+	\end{tabularx}
+	\newline\newline
+	만약 번호가 있는 열거를 원한다면 enumerate환경을 사용하면 된다.\newline
+	
+	\begin{tabularx}{\textwidth \onehalfspacing}{|X|X|}
+		\hline
+		\textbackslash begin\{enumerate\}
+		
+		\ \ \ \ \ \ \textbackslash item Chocola
+		
+		\ \ \ \ \ \ \textbackslash item Vanilla
+		
+		\ \ \ \ \ \ \textbackslash item Maple
+		
+		\textbackslash end\{enumerate\}
+		&
+		\begin{enumerate}
+			\item Chocola
+			\item Vanilla
+			\item Maple
+		\end{enumerate}
+		\\
+		\hline
+	\end{tabularx}
+	\clearpage
 	\subsection{이미지 삽입하기}
+	이미지는 다음과 같이 삽입하면 된다.\newline
+	\textbf{표 안에는 이미지를 추가 할 수 없음으로 이미지는 표 바로 아래 추가한다.}\newline
+	
+	\begin{tabularx}{\textwidth \onehalfspacing}{|X|}
+		\hline
+		\textbackslash begin\{figure\}[h]
+		
+		\ \ \ \ \ \ \textbackslash centering
+		
+		\ \ \ \ \ \ \textbackslash includegraphics[scale=1]\{image\_name.png\}
+		
+		\textbackslash end\{figure\}
+		\\
+		\hline
+	\end{tabularx}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=1]{T6.png}
+	\end{figure}
+	\newline 이미지에 캡션을 달기 위해서는 \textbf{caption}패키지가 필요하다.\newline
+	
+	\begin{tabularx}{\textwidth \onehalfspacing}{|X|}
+		\hline
+		\textbackslash begin\{figure\}[h]
+		
+		\ \ \ \ \ \ \textbackslash centering
+		
+		\ \ \ \ \ \ \textbackslash includegraphics[scale=1]\{image\_name.png\}
+		
+		\ \ \ \ \ \ \textbackslash caption\{Example Image duke\}
+		
+		\textbackslash end\{figure\}\\
+		\hline
+	\end{tabularx}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=1]{T6.png}
+		\caption{Example Image duke}
+	\end{figure}
+	\clearpage 위 두 예시를 보고 여러분은 왜 \textbf{[h]}가 무슨 기능을 하는지 궁금했을 것이다. 대괄호(\textbf{[ ]})안에 무엇이 들어가느냐에 따라서 이미지가 삽입되는 위치가 변하게 된다.자세한 내용은 아래 그래프를 참조 바란다.\newline
+	
+	\begin{tabularx}{\textwidth \onehalfspacing}{|l|X|}
+		\hline
+		h&(\textbf{h}ere) 개체를 코드 위치에 삽입\\
+		\hline
+		t&(\textbf{t}op) 개체를 페이지 맨 위에 삽입\\
+		\hline
+		b&(\textbf{b}ottom) 개체를 페이지 맨 아래에 삽입\\
+		\hline
+		htbp& 개채를 코드 위치에 우선적으로 삽입하고 페이지 경계를 넘어가거나 할 경우에 t,b,p와 같은 차선책을 사용하여 삽입\\
+		\hline
+	\end{tabularx}
+	\newline\newline
+	두단으로 나뉘어진 양식을 채택한 문서나 학술지 같은 경우 이미지를 중감에 삽입하기 보다 위, 안 될 경우 아래에 삽입하는 것을 추천한다.
+	\newline\newline
+	삽입할 사진의 유형에 따라 적합한 이미지 양식은 다음과 같다.
+	\begin{itemize}
+		\item 사진: jpg 또는 jpeg
+		\item 그래프:pdf 또는 eps
+		\item 기하적 그림: png 또는 벡터 이미지
+		\item 일러스트: pdf (PowerPoint에서 `pdf로 내보내기')
+	\end{itemize}
+	\clearpage
 	\subsection{표 삽입하기}
+	여러분은 이 책을 보면서 수 많은 표를 보았을 것이다. 이젠 여러분이 직접 표를 만들 수 있게 표 만드는 방법을 가르쳐 주겠다.맨 처음으로 표 제작은 \textbf{tablar}환경을 사용한다.\newline
+	\begin{center}
+		\onehalfspacing
+		\begin{tabular}{|l|}
+			
+			\hline
+			\textbackslash begin\{tablar\}\{\textbar l\textbar\textbar c\textbar r\textbar\}\\		
+			\ \ \ \ \ \ \textbackslash hline\\		
+			\ \ \ \ \ \ name\&gender\&offshore cash\textbackslash\textbackslash\\
+			\ \ \ \ \ \ \textbackslash hline\\
+			\ \ \ \ \ \ \textbackslash hline\\
+			\ \ \ \ \ \ Trevor\&male\&200,000,000\$\textbackslash\textbackslash\\
+			\ \ \ \ \ \ \textbackslash hline\\
+			\ \ \ \ \ \ Michael\&male\&17,000,000\$\textbackslash\textbackslash\\
+			\ \ \ \ \ \ \textbackslash hline\\
+			\textbackslash end\{tabular\}\\
+			\hline
+		\end{tabular}
+		\ \ \ \ \ \ \begin{tabular}{|l||c|r|}
+			\hline
+			name&gender&offshore cash\\
+			\hline
+			\hline
+			Trevor&male&200,000,000\$\\
+			\hline
+			Michael&male&17,000,000\$\\
+			\hline
+		\end{tabular}
+	\end{center}
+	이젠 위 스크립트를 하나씩 알아볼 시간이다.\textbf{\{ \textbar\ ㅣ \textbar\ c \textbar\ r \textbar\}}\는 각 열을 촤즉, 중간, 우측 정렬 시켜주며, 사이의 \textbf{``\textbar''}\은 수직선을 나타낸며 여러번 사용이 가능하고, \textbf{\textbackslash hline}\은 수평선을 나타내며 역시 여러번 사용 가능하다. 열 구분 기호로는 \textbf{\&}\가 사용이 되며, 행 구분 기호로는 \textbf{\textbackslash\textbackslash}\가 사용이 된다.
+	
+	\subsection{그래프 삽입하기}
 	\subsection{머리말/꼬리말 삽입하기}
 	\section{Advanced Mathematics}
 	\subsection{Equation numbering}
@@ -641,6 +783,7 @@
 	\subsubsection{color}
 	\subsubsection{Fonts}
 	\section{Advanced use of \LaTeX}
+	\subsection{자동 조사}
 	\subsection{customize marking}
 	\subsubsection{footnote}
 	\subsubsection{section}
