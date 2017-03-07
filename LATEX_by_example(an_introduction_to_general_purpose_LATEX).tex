@@ -375,7 +375,7 @@
 		\item 액센트 입력
 	\end{itemize}
 	\subsection{수식 입력하기}
-	\LaTeX 로 논문이나 보고서를 작성 할 때 수식을 넣어야 하는 경우가 많을 것이다. 수식을 입력 할때 다음과 같은 방법을 사용하면 된다.\newline
+	\LaTeX 로 논문이나 보고서를 작성 할 때 수식을 넣어야 하는 경우가 많을 것이다. 수식을 입력 할때 다음과 같은 환경을 만들어 주어야 한다.\newline
 	
 	\begin{tabularx}{\textwidth \onehalfspacing}{|X|X|}
 		\hline
@@ -599,7 +599,33 @@
 		\item 머리말/꼬리말 삽입
 	\end{itemize}
 	\subsection{목차 삽입하기}
+	책이나 논문은 많은 section으로 나위어 지는 경우가 많으며 이 section의 페이지나 대략적인 내용을 알려주기 위하여 목차를 넣는 경우가 많다. \LaTeX 에서는 간단하게 한 스크립트만 입력을 해주면 목차를 작성해 주게 된다.\newline
+	
+	\begin{tabularx}{\textwidth \onehalfspacing}{|X|}
+		\hline
+		\textbackslash tableofcontents\\
+		\hline
+	\end{tabularx}
+	\newline\newline
+	\textbf{주의: }목차는 두번 컴파일 해 주어야 업데이트가 된다.\\
+	다음은 그림, 표 목록과 켭션을 출력하기 위해서는 다음 스크립트를 입려해 주면 된다.\newline
+	
+	\begin{tabularx}{\textwidth \onehalfspacing}{|X|}
+		\hline
+		\textbackslash listoffigures\\
+		\textbackslash listoftables\\
+		\hline
+	\end{tabularx}
+	\clearpage
 	\subsection{각주 삽입하기}
+	각주 입력하기는 매우 쉽다.\\
+	\begin{tabularx}{\textwidth \onehalfspacing}{|X|X|}
+		\hline
+		Where is footnote?\textbackslash footnote\{Here it is!\}&Where is footnote? \footnote{Here it is!}\\
+		\hline
+	\end{tabularx}
+	\newline\newline
+	
 	\subsection{아이템 열거 삽입하기}
 	\subsection{이미지 삽입하기}
 	\subsection{표 삽입하기}
