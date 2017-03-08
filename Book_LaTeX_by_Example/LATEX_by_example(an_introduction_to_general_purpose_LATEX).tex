@@ -11,6 +11,7 @@
 \usepackage{setspace}
 \usepackage{tabularx}
 \usepackage{xfrac}
+\usepackage{tikz}
 \usepackage[firstpage]{draftwatermark}
 \usepackage[hidelinks]{hyperref}
 \usepackage[group-separator={,}]{siunitx} %si unit
@@ -595,11 +596,12 @@
 	\section{여러가지 요소삽입}
 	\subsection{이번장의 목표}
 	\begin{itemize}
-		\item 목차 삽입
-		\item 아이템 열거 삽입
+		\item 목차 삽입하기
+		\item 각주 삽입하기
+		\item 아이템 열거 삽입하기
 		\item 이미지 삽입하기
 		\item 표 삽입하기
-		\item 머리말/꼬리말 삽입
+		\item 그래프 삽입하기
 	\end{itemize}
 	\subsection{목차 삽입하기}
 	책이나 논문은 많은 section으로 나위어 지는 경우가 많으며 이 section의 페이지나 대략적인 내용을 알려주기 위하여 목차를 넣는 경우가 많다. \LaTeX 에서는 간단하게 한 스크립트만 입력을 해주면 목차를 작성해 주게 된다.\newline
@@ -862,7 +864,137 @@
 			\multicolumn{1}{|c|}{center}\\
 			\hline
 		\end{tabular}
-	\end{center}-
+	\end{center}\clearpage
+	\subsection{그래프 삽입}
+	\subsubsection{tikz}
+	tikz를 사용하여 \LaTeX 에서 그래프 및 도형을 그릴 수가 있다. tikz를 사용하기 위해서는 tikz 패키지를 추가 해야 한다.\newline tikz를 사용 할 때 다음사항을 주의 해야 한다.
+	\begin{itemize}
+		\item 데카르트 좌표계나 극 좌표계가 사용이 된다.
+		\item 오른쪽으로 x좌표가 증가하고 위쪽으로 y좌표가 증가한다.
+		\item 중심이 (0,0)이 아니라 상황에 따라 알맞은 위치로 맞춰진다.
+	\end{itemize}
+	tikz사용을 위해서는 다음과 같은 환경을 만드면 된다.\newline
+	
+	\begin{tabularx}{\textwidth \onehalfspacing}{|X|}
+		\hline
+		\textbackslash usepackage\{tikz\}\\
+		//...\\
+		\textbackslash begin\{tikzpicture\}\\
+		\ \ \ \ \ \ \%scripts\\
+		\textbackslash end\{tikzpicture\}\\
+		\hline
+	\end{tabularx}\newline\newline
+	또는 \newline
+	
+	\begin{tabularx}{\textwidth \onehalfspacing}{|X|}
+		\hline
+		\textbackslash usepackage\{tikz\}\\
+		//...\\
+		\textbackslash tikz\{\%scripts\}\\
+		\hline
+	\end{tabularx}\newline\newline
+	으로 사용해도 된다.\clearpage
+	\subsubsection{점}
+	tikz로 점을 입력할 때는 점은 나오지 않고 텍스트만 나오게 된다.\newline
+	\textbf{여러분도 이젠 예상 할 수 있듯이 다음 예제 부터는 tikz환경 안에 있는 내용만 서술 할 것이다.}\newline
+	
+	\begin{tabularx}{\textwidth \onehalfspacing}{|X|X|}
+		\hline
+		\textbackslash node (a) at (0,0)\{a\};
+		
+		\textbackslash node (b) at (-2,2)\{b\};
+		&\tikz{\node (a) at (0,0){a};\node (b) at (-2,2){b}}\\
+		\hline
+		\textbackslash path (0,0) node(x) \{x\} (2,2) node(y) \{y\}
+		&\tikz{\path (0,0) node(x) {x} (2,2) node(y) {y}}\\
+		\hline
+	\end{tabularx}
+	\subsubsection{선}
+	선분을 그리는 방법은 다음과 같다.\newline
+	
+	\begin{tabularx}{\textwidth \onehalfspacing}{|X|X|}
+		\hline
+		\textbackslash draw[option] (0,0) - - (1,1) - - (2,0);
+		&\tikz{\draw (0,0)--(1,1)--(2,0)}\\
+		\hline
+	\end{tabularx}\newline\newline
+	두 점을 직선이 아닌 택시 거리로 연결 할 수도 있다.\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|X|}
+		\hline
+		\textbackslash draw (0,0) \textbar- (1,1);
+		&\tikz{\draw (0,0) |-(1,1);}\\
+		\hline
+		\textbackslash draw (0,0) -\textbar (1,1);
+		&\tikz{\draw (0,0) -| (1,1);}\\
+		\hline
+	\end{tabularx}\newline\newline
+	다음 같은 방법으로 베지 곡선도 만들 수 있다.\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|X|}
+		\hline
+		\textbackslash draw (0,0) .. controls (1,1) .. (2,0);
+		&\tikz{\draw (0,0) .. controls (1,1).. (2,0);}\\
+		\hline
+		\textbackslash draw (0,0) .. controls (1,1)
+		
+		 and (2,1) .. (3,0);
+		&\tikz{\draw (0,0) .. controls (1,1)and(2,1).. (3,0);}\\
+		\hline
+	\end{tabularx} \clearpage
+	화살표도 간단하게 만들 수 있다.\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|X|}
+		\hline
+		\textbackslash draw [-\textgreater] (0,0) - - (1,1) - -(3,0);&
+		\tikz{\draw[->](0,0) -- (1,1)--(3,0);}\\
+		\hline
+		\textbackslash draw [\textless-\textgreater] (0,0) .. controls(1,1) ..(3,0);&
+		\tikz{\draw[<->](0,0) .. controls(1,1)..(3,0);}\\
+		\hline
+	\end{tabularx}\newline\newline
+	굵거나 점선으로 되어 있는 선분도 만들 수 있다.\newline
+	
+	\begin{tabularx}{\textwidth \onehalfspacing}{|X|X|}
+		\hline
+		\textbackslash draw[thick] (0,0) .. controls (1,1) .. (2,0);
+		&\tikz{\draw[thick] (0,0) .. controls (1,1).. (2,0);}\\
+		\hline
+		\textbackslash draw[dashed] (0,0) .. controls (1,1) .. (2,0);
+		&\tikz{\draw[dashed] (0,0) .. controls (1,1).. (2,0);}\\
+		\hline
+	\end{tabularx}
+	\subsubsection{도형}
+	tikz를 사용하여 직선 이외에 다양한 도형을 그릴 수 있다.이 때 \textbf{cycle}\을 사용하면 첫번째 점으로 이여진다.\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|X|}
+		\hline
+		\textbackslash draw[thick] (0,0) - - (1,1) - - (2,0)- -cycle;
+		&\tikz{\draw[thick](0,0)--(1,1)--(2,0)--cycle;}\\
+		\hline
+		\textbackslash filldraw[blue] (0,0) - - (1,1) - - (2,0)- -cycle;
+		&\tikz{\filldraw[blue](0,0)--(1,1)--(2,0)--cycle;}\\
+		\hline
+		\textbackslash draw(0,0) circle[radius=5mm];
+		&\tikz{\draw (0,0)circle[radius=5mm];}\\
+		\hline
+		\textbackslash draw(0,0)&\\
+		circle[x radius=10mm, y radius=5mm];
+		&\tikz{\draw (0,0)circle[x radius=10mm, y radius=5mm];}\\
+		\hline
+		\textbackslash draw (0 ,0) arc (150:30:5mm);
+		&\tikz{\draw (0,0) arc (150:30:5 mm );}\\
+		\hline
+		\textbackslash filldraw(0,0) - - (12 mm,0 mm) &\\arc(0:30:12 mm) - - cycle;
+		&\tikz{\filldraw (0 ,0) -- (12 mm ,0 mm) arc (0:30:12 mm) -- cycle ;}\\
+		\hline
+	\end{tabularx}
+	\subsubsection{함수}
+	좌표계를 그리는 방법은 다음과 같다.\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|X|}
+		
+	\end{tabularx}
 	\section{Advanced Mathematics}
 	\subsection{Equation numbering}
 	\subsubsection{Equation numbering}
