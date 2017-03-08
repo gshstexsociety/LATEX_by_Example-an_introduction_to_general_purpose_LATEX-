@@ -187,6 +187,8 @@
 	\end{tabularx}
 	\newline
 	\newline
+	\textbf{참고: 이 책은 12pt article문서 클래스를 사용하고 있어 \textbackslash huge와 \textbackslash Huge와의의 크기 차이가 없다.}
+	
 	위와 같은 방법을 사용하면 \textbackslash size 뒤에 있는 {\bf 모든 턱스트 크기가} 변하게 된다. 만약 {\large 이것처럼} 특정 부분에만 글자 크기를 적용 하고 싶다면 \newline
 	
 	\begin{tabularx}{\textwidth \doublespacing}{ |X|X| }
@@ -248,9 +250,9 @@
 		\hline
 		\{\textbackslash flushleft Hello World!! \} & Hello World!!\\
 		\hline
-		\{\textbackslash flushright Hello World!! \} & \multicolumn{1}{|r|}{Hello World!!}\\
+		\{\textbackslash flushright Hello World!! \} & \multicolumn{1}{r|}{Hello World!!}\\
 		\hline
-		\{\textbackslash centering Hello World!! \} & \multicolumn{1}{|c|}{Hello World!!}\\
+		\{\textbackslash centering Hello World!! \} & \multicolumn{1}{c|}{Hello World!!}\\
 		\hline
 	\end{tabularx}
 	\clearpage
@@ -262,11 +264,11 @@
 		\ \ \ \ \ \ Hello World!! & \\
 		\textbackslash end\{flushleft\} & \\
 		\hline
-		\textbackslash begin\{flushright\} & \multicolumn{1}{|r|}{Hello World!!}\\
+		\textbackslash begin\{flushright\} & \multicolumn{1}{r|}{Hello World!!}\\
 		\ \ \ \ \ \ Hello World!! & \\
 		\textbackslash end\{flushright\} & \\
 		\hline
-		\textbackslash begin\{center\} & \multicolumn{1}{|c|}{Hello World!!}\\
+		\textbackslash begin\{center\} & \multicolumn{1}{c|}{Hello World!!}\\
 		\ \ \ \ \ \ Hello World!! & \\
 		\textbackslash end\{center\} & \\
 		\hline
@@ -698,6 +700,8 @@
 	
 	\begin{tabularx}{\textwidth \onehalfspacing}{|X|}
 		\hline
+		\textbackslash usepackage\{caption\}\\
+		//...\\
 		\textbackslash begin\{figure\}[h]
 		
 		\ \ \ \ \ \ \textbackslash centering
@@ -768,10 +772,97 @@
 			\hline
 		\end{tabular}
 	\end{center}
-	이젠 위 스크립트를 하나씩 알아볼 시간이다.\textbf{\{ \textbar\ ㅣ \textbar\ c \textbar\ r \textbar\}}\는 각 열을 촤즉, 중간, 우측 정렬 시켜주며, 사이의 \textbf{``\textbar''}\은 수직선을 나타낸며 여러번 사용이 가능하고, \textbf{\textbackslash hline}\은 수평선을 나타내며 역시 여러번 사용 가능하다. 열 구분 기호로는 \textbf{\&}\가 사용이 되며, 행 구분 기호로는 \textbf{\textbackslash\textbackslash}\가 사용이 된다.
+	이젠 위 스크립트를 하나씩 알아볼 시간이다.\textbf{\{ \textbar\ ㅣ \textbar\ c \textbar\ r \textbar\}}\는 각 열을 촤즉, 중간, 우측 정렬 시켜주며, 사이의 \textbf{``\textbar''}\은 수직선을 나타낸며 여러번 사용이 가능하고, \textbf{\textbackslash hline}\은 수평선을 나타내며 역시 여러번 사용 가능하다. 열 구분 기호로는 \textbf{\&}\가 사용이 되며, 행 구분 기호로는 \textbf{\textbackslash\textbackslash}\가 사용이 된다.\newline\newline
+	다음은 여러가지 그래프를 그리는 예시이다.\newline
+	\textbf{이번 표 예시부터는 tabular화경안에 있는 스크립트만 서술 하겠다.}\newline
+	\begin{center}
+		\onehalfspacing
+		\begin{tabular}{|l|}
+			\hline
+			\textbackslash hline\\
+			\textbackslash diagbox\{down\}\{up\}\textbackslash\textbackslash\\
+			\textbackslash hline\\
+			\hline
+		\end{tabular}
+		\ \ \ \ \ \ 
+		\begin{tabular}{|l|}
+			\hline
+			\diagbox{down}{up}\\
+			\hline
+		\end{tabular}
+	\end{center}
 	
-	\subsection{그래프 삽입하기}
-	\subsection{머리말/꼬리말 삽입하기}
+	\begin{center}
+		\onehalfspacing
+		\begin{tabular}{|l|}
+			\hline
+			\textbackslash hline\\
+			short\&short\&short\textbackslash\textbackslash\\
+			\textbackslash hline\\
+			\textbackslash multicolumn\{3\}\{\textbar c\textbar\}\{long\}\textbackslash\textbackslash\\
+			\textbackslash hline\\
+			\hline
+		\end{tabular}
+		\ \ \ \ \ \ 
+		\begin{tabular}{|c|c|c|}
+			\hline
+			short&short&short\\
+			\hline
+			\multicolumn{3}{|c|}{long}\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\clearpage
+	\begin{center}
+		\onehalfspacing
+		\begin{tabular}{|l|}
+			\hline
+			\textbackslash hline\\
+			short\&short\&short\textbackslash\textbackslash\\
+			\textbackslash hline\\
+			short\&\textbackslash multicolumn\{2\}\{c\textbar\}\{long\}\textbackslash\textbackslash\\
+			\textbackslash hline\\
+			\hline
+		\end{tabular}
+		\ \ \ \ \ \ 
+		\begin{tabular}{|c|c|c|}
+			\hline
+			short&short&short\\
+			\hline
+			short&\multicolumn{2}{c|}{long}\\
+			\hline
+		\end{tabular}
+		\newline
+	\end{center}
+	\textbf{주의: 위 예제와 같은 경우에는 ``c\textbar'' 대신 ``\textbar c\textbar''\를 사용 할 경우 수직선이 중복되어 short와 long사이의 수직선만 두껍게 표기가 된다.}\newline
+	\begin{center}
+		\onehalfspacing
+		\begin{tabular}{|l|}
+			\hline
+			normal\\
+			\textbackslash hline
+			\textbackslash hline\\
+			\textbackslash multicolumn\{1\}\{\textbar l \textbar\}\{left\}\textbackslash\textbackslash\\
+			\textbackslash hline\\
+			\textbackslash multicolumn\{1\}\{\textbar r \textbar\}\{right\}\textbackslash\textbackslash\\
+			\textbackslash hline\\
+			\textbackslash multicolumn\{1\}\{\textbar c \textbar\}\{center\}\textbackslash\textbackslash\\
+			\textbackslash hline\\
+			\hline
+		\end{tabular}
+		\ \ \ \ \ \ 
+		\begin{tabular}{|l|}
+			\hline
+			normal\\
+			\hline
+			\multicolumn{1}{|l|}{left}\\
+			\hline
+			\multicolumn{1}{|r|}{right}\\
+			\hline
+			\multicolumn{1}{|c|}{center}\\
+			\hline
+		\end{tabular}
+	\end{center}-
 	\section{Advanced Mathematics}
 	\subsection{Equation numbering}
 	\subsubsection{Equation numbering}

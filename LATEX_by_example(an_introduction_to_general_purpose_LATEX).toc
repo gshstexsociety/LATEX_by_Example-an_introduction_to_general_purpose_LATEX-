@@ -32,22 +32,21 @@
 \contentsline {subsection}{\numberline {4}아이템 열거 삽입하기}{14}{subsection.4.4}
 \contentsline {subsection}{\numberline {5}이미지 삽입하기}{15}{subsection.4.5}
 \contentsline {subsection}{\numberline {6}표 삽입하기}{17}{subsection.4.6}
-\contentsline {subsection}{\numberline {7}그래프 삽입하기}{18}{subsection.4.7}
-\contentsline {subsection}{\numberline {8}머리말/꼬리말 삽입하기}{18}{subsection.4.8}
-\contentsline {section}{\numberline {V}Advanced Mathematics}{18}{section.5}
-\contentsline {subsection}{\numberline {1}Equation numbering}{18}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {1.1}Equation numbering}{18}{subsubsection.5.1.1}
-\contentsline {subsubsection}{\numberline {1.2}Equation Referencing}{18}{subsubsection.5.1.2}
-\contentsline {subsection}{\numberline {2}Align Equation}{18}{subsection.5.2}
-\contentsline {subsubsection}{\numberline {2.1}Align}{18}{subsubsection.5.2.1}
-\contentsline {subsubsection}{\numberline {2.2}Aligned braces}{18}{subsubsection.5.2.2}
-\contentsline {subsection}{\numberline {3}Formatting Equations}{18}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {3.1}color}{18}{subsubsection.5.3.1}
-\contentsline {subsubsection}{\numberline {3.2}Fonts}{18}{subsubsection.5.3.2}
-\contentsline {section}{\numberline {VI}Advanced use of \LaTeX }{18}{section.6}
-\contentsline {subsection}{\numberline {1}customize marking}{18}{subsection.6.1}
-\contentsline {subsubsection}{\numberline {1.1}footnote}{18}{subsubsection.6.1.1}
-\contentsline {subsubsection}{\numberline {1.2}section}{18}{subsubsection.6.1.2}
-\contentsline {subsection}{\numberline {2}referencing}{18}{subsection.6.2}
-\contentsline {subsection}{\numberline {3}algorithms}{18}{subsection.6.3}
-\contentsline {subsection}{\numberline {4}source code}{18}{subsection.6.4}
+\contentsline {section}{\numberline {V}Advanced Mathematics}{19}{section.5}
+\contentsline {subsection}{\numberline {1}Equation numbering}{19}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {1.1}Equation numbering}{19}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {1.2}Equation Referencing}{19}{subsubsection.5.1.2}
+\contentsline {subsection}{\numberline {2}Align Equation}{19}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {2.1}Align}{19}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {2.2}Aligned braces}{19}{subsubsection.5.2.2}
+\contentsline {subsection}{\numberline {3}Formatting Equations}{19}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {3.1}color}{19}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\numberline {3.2}Fonts}{19}{subsubsection.5.3.2}
+\contentsline {section}{\numberline {VI}Advanced use of \LaTeX }{19}{section.6}
+\contentsline {subsection}{\numberline {1}자동 조사}{19}{subsection.6.1}
+\contentsline {subsection}{\numberline {2}customize marking}{19}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {2.1}footnote}{19}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {2.2}section}{19}{subsubsection.6.2.2}
+\contentsline {subsection}{\numberline {3}referencing}{19}{subsection.6.3}
+\contentsline {subsection}{\numberline {4}algorithms}{19}{subsection.6.4}
+\contentsline {subsection}{\numberline {5}source code}{19}{subsection.6.5}
