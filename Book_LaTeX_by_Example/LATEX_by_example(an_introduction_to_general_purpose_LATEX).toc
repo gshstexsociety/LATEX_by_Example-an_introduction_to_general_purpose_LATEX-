@@ -38,21 +38,23 @@
 \contentsline {subsubsection}{\numberline {7.3}선}{20}{subsubsection.4.7.3}
 \contentsline {subsubsection}{\numberline {7.4}도형}{21}{subsubsection.4.7.4}
 \contentsline {subsubsection}{\numberline {7.5}함수}{22}{subsubsection.4.7.5}
-\contentsline {section}{\numberline {V}Advanced Mathematics}{22}{section.5}
-\contentsline {subsection}{\numberline {1}Equation numbering}{22}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {1.1}Equation numbering}{22}{subsubsection.5.1.1}
-\contentsline {subsubsection}{\numberline {1.2}Equation Referencing}{22}{subsubsection.5.1.2}
-\contentsline {subsection}{\numberline {2}Align Equation}{22}{subsection.5.2}
-\contentsline {subsubsection}{\numberline {2.1}Align}{22}{subsubsection.5.2.1}
-\contentsline {subsubsection}{\numberline {2.2}Aligned braces}{22}{subsubsection.5.2.2}
-\contentsline {subsection}{\numberline {3}Formatting Equations}{22}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {3.1}color}{22}{subsubsection.5.3.1}
-\contentsline {subsubsection}{\numberline {3.2}Fonts}{22}{subsubsection.5.3.2}
-\contentsline {section}{\numberline {VI}Advanced use of \LaTeX }{22}{section.6}
-\contentsline {subsection}{\numberline {1}자동 조사}{22}{subsection.6.1}
-\contentsline {subsection}{\numberline {2}customize marking}{22}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {2.1}footnote}{22}{subsubsection.6.2.1}
-\contentsline {subsubsection}{\numberline {2.2}section}{22}{subsubsection.6.2.2}
-\contentsline {subsection}{\numberline {3}referencing}{22}{subsection.6.3}
-\contentsline {subsection}{\numberline {4}algorithms}{22}{subsection.6.4}
-\contentsline {subsection}{\numberline {5}source code}{22}{subsection.6.5}
+\contentsline {section}{\numberline {V}Advanced Mathematics}{23}{section.5}
+\contentsline {subsection}{\numberline {1}수식 라베링}{23}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {1.1}수식 라벨링}{23}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {1.2}수식 상호 참조}{24}{subsubsection.5.1.2}
+\contentsline {subsection}{\numberline {2}Align Equation}{24}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {2.1}Align}{24}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {2.2}Aligned braces}{24}{subsubsection.5.2.2}
+\contentsline {subsection}{\numberline {3}Formatting Equations}{24}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {3.1}size}{24}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\numberline {3.2}color}{24}{subsubsection.5.3.2}
+\contentsline {subsubsection}{\numberline {3.3}Fonts}{24}{subsubsection.5.3.3}
+\contentsline {section}{\numberline {VI}Advanced use of \LaTeX }{24}{section.6}
+\contentsline {subsection}{\numberline {1}자동 조사}{24}{subsection.6.1}
+\contentsline {subsection}{\numberline {2}참고 문헌 삽입}{24}{subsection.6.2}
+\contentsline {subsection}{\numberline {3}customize marking}{24}{subsection.6.3}
+\contentsline {subsubsection}{\numberline {3.1}footnote}{24}{subsubsection.6.3.1}
+\contentsline {subsubsection}{\numberline {3.2}section}{24}{subsubsection.6.3.2}
+\contentsline {subsection}{\numberline {4}referencing}{24}{subsection.6.4}
+\contentsline {subsection}{\numberline {5}algorithms}{24}{subsection.6.5}
+\contentsline {subsection}{\numberline {6}source code}{24}{subsection.6.6}

@@ -39,20 +39,22 @@
 \BOOKMARK [3][-]{subsubsection.4.7.4}{..}{subsection.4.7}% 39
 \BOOKMARK [3][-]{subsubsection.4.7.5}{..}{subsection.4.7}% 40
 \BOOKMARK [1][-]{section.5}{Advanced Mathematics}{}% 41
-\BOOKMARK [2][-]{subsection.5.1}{Equation numbering}{section.5}% 42
-\BOOKMARK [3][-]{subsubsection.5.1.1}{Equation numbering}{subsection.5.1}% 43
-\BOOKMARK [3][-]{subsubsection.5.1.2}{Equation Referencing}{subsection.5.1}% 44
+\BOOKMARK [2][-]{subsection.5.1}{.. ...}{section.5}% 42
+\BOOKMARK [3][-]{subsubsection.5.1.1}{.. ...}{subsection.5.1}% 43
+\BOOKMARK [3][-]{subsubsection.5.1.2}{.. .. ..}{subsection.5.1}% 44
 \BOOKMARK [2][-]{subsection.5.2}{Align Equation}{section.5}% 45
 \BOOKMARK [3][-]{subsubsection.5.2.1}{Align}{subsection.5.2}% 46
 \BOOKMARK [3][-]{subsubsection.5.2.2}{Aligned braces}{subsection.5.2}% 47
 \BOOKMARK [2][-]{subsection.5.3}{Formatting Equations}{section.5}% 48
-\BOOKMARK [3][-]{subsubsection.5.3.1}{color}{subsection.5.3}% 49
-\BOOKMARK [3][-]{subsubsection.5.3.2}{Fonts}{subsection.5.3}% 50
-\BOOKMARK [1][-]{section.6}{Advanced use of LaTeX}{}% 51
-\BOOKMARK [2][-]{subsection.6.1}{.. ..}{section.6}% 52
-\BOOKMARK [2][-]{subsection.6.2}{customize marking}{section.6}% 53
-\BOOKMARK [3][-]{subsubsection.6.2.1}{footnote}{subsection.6.2}% 54
-\BOOKMARK [3][-]{subsubsection.6.2.2}{section}{subsection.6.2}% 55
-\BOOKMARK [2][-]{subsection.6.3}{referencing}{section.6}% 56
-\BOOKMARK [2][-]{subsection.6.4}{algorithms}{section.6}% 57
-\BOOKMARK [2][-]{subsection.6.5}{source code}{section.6}% 58
+\BOOKMARK [3][-]{subsubsection.5.3.1}{size}{subsection.5.3}% 49
+\BOOKMARK [3][-]{subsubsection.5.3.2}{color}{subsection.5.3}% 50
+\BOOKMARK [3][-]{subsubsection.5.3.3}{Fonts}{subsection.5.3}% 51
+\BOOKMARK [1][-]{section.6}{Advanced use of LaTeX}{}% 52
+\BOOKMARK [2][-]{subsection.6.1}{.. ..}{section.6}% 53
+\BOOKMARK [2][-]{subsection.6.2}{.. .. ..}{section.6}% 54
+\BOOKMARK [2][-]{subsection.6.3}{customize marking}{section.6}% 55
+\BOOKMARK [3][-]{subsubsection.6.3.1}{footnote}{subsection.6.3}% 56
+\BOOKMARK [3][-]{subsubsection.6.3.2}{section}{subsection.6.3}% 57
+\BOOKMARK [2][-]{subsection.6.4}{referencing}{section.6}% 58
+\BOOKMARK [2][-]{subsection.6.5}{algorithms}{section.6}% 59
+\BOOKMARK [2][-]{subsection.6.6}{source code}{section.6}% 60

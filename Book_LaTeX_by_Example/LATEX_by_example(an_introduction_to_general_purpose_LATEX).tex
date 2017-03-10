@@ -188,7 +188,7 @@
 	\end{tabularx}
 	\newline
 	\newline
-	\textbf{참고: 이 책은 12pt article문서 클래스를 사용하고 있어 \textbackslash huge와 \textbackslash Huge와의의 크기 차이가 없다.}
+	\textbf{참고: 이 책은 12pt article문서 클래스를 사용하고 있어 \textbackslash huge와 \textbackslash Huge의 크기 차이가 없다.}
 	
 	위와 같은 방법을 사용하면 \textbackslash size 뒤에 있는 {\bf 모든 턱스트 크기가} 변하게 된다. 만약 {\large 이것처럼} 특정 부분에만 글자 크기를 적용 하고 싶다면 \newline
 	
@@ -698,12 +698,10 @@
 		\centering
 		\includegraphics[scale=1]{T6.png}
 	\end{figure}
-	\newline 이미지에 캡션을 달기 위해서는 \textbf{caption}패키지가 필요하다.\newline
+	\newline 이미지에 캡션을 달기 위해서는 간단히 스크립트 한 줄만 더 적어주면 된다.\newline
 	
 	\begin{tabularx}{\textwidth \onehalfspacing}{|X|}
 		\hline
-		\textbackslash usepackage\{caption\}\\
-		//...\\
 		\textbackslash begin\{figure\}[h]
 		
 		\ \ \ \ \ \ \textbackslash centering
@@ -989,24 +987,85 @@
 		&\tikz{\filldraw (0 ,0) -- (12 mm ,0 mm) arc (0:30:12 mm) -- cycle ;}\\
 		\hline
 	\end{tabularx}
+	\clearpage
 	\subsubsection{함수}
 	좌표계를 그리는 방법은 다음과 같다.\newline
 	
-	\begin{tabularx}{\textwidth\onehalfspacing}{|X|X|}
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|c|}
+		\hline
+		\textbackslash draw[step =5mm, gray, thin](-1.2, -1.2) grid(1.2, 1.2);
 		
+		\textbackslash draw[-\textgreater, thick ](-1.25, 0)- -(1.25, 0);
+		
+		\textbackslash draw[-\textgreater, thick ](0, -1.25)- -(0, 1.25);
+		&\tikz{\draw[step=5mm,gray,thin](-1.2 ,-1.2) grid(1.2,1.2);
+			\draw[->, thick ]( -1.25 ,0) -- (1.25 ,0);
+			\draw[->, thick ](0 , -1.25) -- (0 ,1.25);}\\
+		\hline
+	\end{tabularx}\newline\newline
+	함수 그래프를 입력하기 위해서는 다음과 같이 정의역을 정해주고 사용하면 된다. \newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|c|}
+		\hline
+		\textbackslash draw[step=5mm, gray, thin ](-1.2, -1.2) grid(1.2, 1.2);
+		
+		\textbackslash draw[domain=-1:1, samples=50] plot(\textbackslash x, {sin(pi*\textbackslash x r )});
+		&\tikz{\draw[step=5mm, gray, thin](-1.2 ,-1.2) grid (1.2, 1.2);
+			\draw[domain=-1:1, samples=50] plot(\x ,{ sin(pi*\x r )});}\\
+		\hline
 	\end{tabularx}
+	\newline\newline
+	여기서 ``pi*\textbackslash x''뒤의 `r'은 radian을 의미한다.
+	\clearpage
 	\section{Advanced Mathematics}
-	\subsection{Equation numbering}
-	\subsubsection{Equation numbering}
-	\subsubsection{Equation Referencing}
+	\subsection{수식 라베링}
+	수학 논문의 경우 많은 수식이 사용되며 이것을 모두 번호를 매기고 참조를 하는데에 애를 먹을 수 있다. 심지어 중간에 수식을 첨부할 경우 뒤의 넘버링을 모두 바꾸어야 하고 상호 참조한 부분 까지 모두 일일이 찾아서 바꿔줘야 할 수도 있다. 하지만 \LaTeX 의 라벨링 기능을 사용하면 자동으로 상호참조 된 부분을 바꿔준다.
+	\subsubsection{수식 라벨링}
+	\textbf{equation}환경을 사용하면 자동으로 라벨링\를 해준다.\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|X|}
+		\hline
+		equation:
+		
+		\textbackslash begin\{equation\}
+		
+		
+		\ \ \ \ \ \ f(x) = (x+1)(x+2)
+		
+		\textbackslash end\{equation\}
+		&equation:
+		\begin{equation}
+			f(x) = (x+1)(x+2)
+		\end{equation}\\
+		\hline
+	\end{tabularx}
+	\newline\newline
+	\textbf{amsmath}패키지를 사용하면 단원별로 라벨링이 가능하다. \newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|}
+		\hline
+		\textbackslash usepackage\{amsmath\}
+		
+		\ \ \ \textbackslash numberwithin\{equation\}\{subsection\}
+		
+		//...
+		
+		(equation script...)\\
+		\hline
+	\end{tabularx}
+	
+	종속방정식을 라벨링하기 위해서는 다음과 같이 하면 된다.
+	\subsubsection{수식 상호 참조}
 	\subsection{Align Equation}
 	\subsubsection{Align}
 	\subsubsection{Aligned braces}
 	\subsection{Formatting Equations}
+	\subsubsection{size}
 	\subsubsection{color}
 	\subsubsection{Fonts}
 	\section{Advanced use of \LaTeX}
 	\subsection{자동 조사}
+	\subsection{참고 문헌 삽입}
 	\subsection{customize marking}
 	\subsubsection{footnote}
 	\subsubsection{section}
