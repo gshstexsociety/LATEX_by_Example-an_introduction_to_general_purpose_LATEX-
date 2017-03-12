@@ -1029,7 +1029,6 @@
 		
 		\textbackslash begin\{equation\}
 		
-		
 		\ \ \ \ \ \ f(x) = (x+1)(x+2)
 		
 		\textbackslash end\{equation\}
@@ -1053,16 +1052,157 @@
 		(equation script...)\\
 		\hline
 	\end{tabularx}
+	\newline\newline
+	종속방정식을 라벨링하기 위해서는 \textbf{subequations}환경을 사용하면 된다.\newline
 	
-	종속방정식을 라벨링하기 위해서는 다음과 같이 하면 된다.
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|}
+		\hline
+		\textbackslash begin\{subequations\}\\
+		\ \ \ \ \ \ \textbackslash begin\{align\}\\
+		\ \ \ \ \ \ \ \ \ \ \ \ 1+1\&=2\textbackslash\textbackslash\\
+		\ \ \ \ \ \ \ \ \ \ \ \ 2\&=1+1\\
+		\ \ \ \ \ \ \textbackslash end\{align\}\\
+		\textbackslash end\{subequations\}\\
+		\hline
+	\end{tabularx}
+	\begin{subequations}
+		\label{eq:align}
+		\begin{align}
+		1+1&=2\\
+		2&=1+1
+		\end{align}
+	\end{subequations}\clearpage
 	\subsubsection{수식 상호 참조}
-	\subsection{Align Equation}
-	\subsubsection{Align}
-	\subsubsection{Aligned braces}
+	\textbf{\textbackslash label}와 \textbf{\textbackslash ref}를 사용하면 손 쉽게 레퍼런싱을 할 수가 있다.\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|X|}
+		\hline
+		\textbackslash begin\{equation\}
+		
+		\ \ \ \ \ \ \textbackslash label\{eq:sample\}
+		
+		\ \ \ \ \ \ f(x) = x+1
+		
+		\textbackslash end\{equation\}
+		
+		you can reference \textbackslash ref\{eq:sample\} like this
+		&\begin{equation}
+			\label{eq:sample}
+			f(x)=x+1
+		\end{equation}
+		
+		you can reference \ref{eq:sample} like this\\
+		\hline
+	\end{tabularx}\newline\newline
+	또는 다음과 같이 레퍼런싱 할 수 있다.\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|X|}
+		\hline
+		or you can reference like \textbackslash ref\{eq:sample\}
+		&or you can reference like \eqref{eq:sample}\\
+		\hline
+	\end{tabularx}
+	\subsection{수식 정렬하기}
+	\LaTeX 는 깔끔한 논문을 작성 할 수 있도록 도와준다. 그럼 역시 수식을 깔끔하게 정열하는 방법도 당연히 있을 것이다. 이번 단원에서는 여러문은 \eqref{eq:align}와 같이 수식을 정열하는 방법을 배울 것이다.\newline
+	수식 정열은 \textbf{amsmath}패키지의 \textbf{align}또는 \textbf{align*}(수식 라벨링이 안됨)을 사용한다.\newline
+	\textbf{align 환경은 표 안에서 사용이 불가능 함으로 결과는 표 아래에 표시 하겠다.}\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|}
+		\hline
+		\textbackslash begin\{align*\}
+		
+		\ \ \ \ \ \ f(x) \&=(x+1)(x+2)\textbackslash\textbackslash
+		
+		\ \ \ \ \ \ \&=x\textasciicircum2+3x+2
+		
+		\textbackslash end\{align*\}
+		\\\hline
+	\end{tabularx}
+	\begin{align*}
+	f(x) &=(x+1)(x+2)\\
+	&=x^2+3x+2
+	\end{align*}
+	위 예시에서 알 수 있듯이 \textbf{\textbackslash\textbackslash}는 줄을 구분할 때에 사용이 되고 \textbf{\&}은 맞출 위치를 지정 할 때에 쓰인다.
+	\newline\newline
+	\textbf{align}은 다음과 같이도 사용 할 수가 있다.\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|}
+		\hline
+		\textbackslash begin\{align*\}
+		
+		\ \ \ \ \ \ f(x) \&=1+2+3 \textbackslash nonumber \textbackslash\textbackslash
+		
+		\ \ \ \ \ \ \&\textbackslash qquad \{\} +4+5
+		
+		\textbackslash end\{align*\}\\
+		\hline
+	\end{tabularx}
+	\begin{align*}
+		f(x) &=11+2+3\nonumber\\
+		& \qquad{}+4+5
+	\end{align*}\clearpage
+	다음과 같은 더 복잡한 수식의 정렬도 가능하다.\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|}
+		\hline
+		\textbackslash begin\{align*\}
+		
+		\ \ \ \ \ \ f(x) \&=x\textasciicircum2 \& g(x) \&=2\textbackslash\textbackslash
+		
+		\ \ \ \ \ \ f'(x) \&=2c \& g'(x)\&=0
+		
+		\textbackslash end\{align*\}\\
+		\hline
+	\end{tabularx}
+	\begin{align*}
+	f(x) &=x^2 & g(x)&=2\\
+	f'(x) &=2x & g'(x)&=0
+	\end{align*}
+	\textbf{cases}환경을 사용하면 다음과 같은 수식 정렬도 가능하다.\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|X|}
+		\hline
+		\textbackslash(
+		
+		f(x)=
+		
+		\textbackslash begin\{cases\}
+		
+		x\textasciicircum2+3x+2 \&\text{if} x\textbackslash geq 0
+		
+		1 \&\text{if} x<0
+		
+		\textbackslash end\{cases\}
+		\textbackslash)
+		&
+		\[f(x)=
+		\begin{cases}
+		x^2+3x+2 & \text{if} x \geq 0\\
+		1 & \text{if} x <0
+		\end{cases}\]
+		\\
+		\hline
+	\end{tabularx}\newline\newline
+	만약 두번째 분단이 텍스트만 포함 하고 있다면 수식 환경안에 \textbf{decases*}환경을 사용하면 된다.\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|X|}
+		\hline
+		f(x)= \textbackslash begin\{dcases*\}
+		
+		\ \ \ \ \ \ 1 \& when \$x\$ is even\textbackslash\textbackslash
+		
+		\ \ \ \ \ \ 0 \& when \$x\$ is odd
+		
+		\textbackslash end\{dcases*\}
+		&\[f(x)=\begin{dcases*}
+		content...
+		\end{dcases*}\]
+	\end{tabularx}
 	\subsection{Formatting Equations}
 	\subsubsection{size}
 	\subsubsection{color}
 	\subsubsection{Fonts}
+	\subsubsection{boxed}
 	\section{Advanced use of \LaTeX}
 	\subsection{자동 조사}
 	\subsection{참고 문헌 삽입}

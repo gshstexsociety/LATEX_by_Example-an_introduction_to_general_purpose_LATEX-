@@ -42,19 +42,17 @@
 \contentsline {subsection}{\numberline {1}수식 라베링}{23}{subsection.5.1}
 \contentsline {subsubsection}{\numberline {1.1}수식 라벨링}{23}{subsubsection.5.1.1}
 \contentsline {subsubsection}{\numberline {1.2}수식 상호 참조}{24}{subsubsection.5.1.2}
-\contentsline {subsection}{\numberline {2}Align Equation}{24}{subsection.5.2}
-\contentsline {subsubsection}{\numberline {2.1}Align}{24}{subsubsection.5.2.1}
-\contentsline {subsubsection}{\numberline {2.2}Aligned braces}{24}{subsubsection.5.2.2}
-\contentsline {subsection}{\numberline {3}Formatting Equations}{24}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {3.1}size}{24}{subsubsection.5.3.1}
-\contentsline {subsubsection}{\numberline {3.2}color}{24}{subsubsection.5.3.2}
-\contentsline {subsubsection}{\numberline {3.3}Fonts}{24}{subsubsection.5.3.3}
-\contentsline {section}{\numberline {VI}Advanced use of \LaTeX }{24}{section.6}
-\contentsline {subsection}{\numberline {1}자동 조사}{24}{subsection.6.1}
-\contentsline {subsection}{\numberline {2}참고 문헌 삽입}{24}{subsection.6.2}
-\contentsline {subsection}{\numberline {3}customize marking}{24}{subsection.6.3}
-\contentsline {subsubsection}{\numberline {3.1}footnote}{24}{subsubsection.6.3.1}
-\contentsline {subsubsection}{\numberline {3.2}section}{24}{subsubsection.6.3.2}
-\contentsline {subsection}{\numberline {4}referencing}{24}{subsection.6.4}
-\contentsline {subsection}{\numberline {5}algorithms}{24}{subsection.6.5}
-\contentsline {subsection}{\numberline {6}source code}{24}{subsection.6.6}
+\contentsline {subsection}{\numberline {2}수식 정렬하기}{24}{subsection.5.2}
+\contentsline {subsection}{\numberline {3}Formatting Equations}{26}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {3.1}size}{26}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\numberline {3.2}color}{26}{subsubsection.5.3.2}
+\contentsline {subsubsection}{\numberline {3.3}Fonts}{26}{subsubsection.5.3.3}
+\contentsline {section}{\numberline {VI}Advanced use of \LaTeX }{26}{section.6}
+\contentsline {subsection}{\numberline {1}자동 조사}{26}{subsection.6.1}
+\contentsline {subsection}{\numberline {2}참고 문헌 삽입}{26}{subsection.6.2}
+\contentsline {subsection}{\numberline {3}customize marking}{26}{subsection.6.3}
+\contentsline {subsubsection}{\numberline {3.1}footnote}{26}{subsubsection.6.3.1}
+\contentsline {subsubsection}{\numberline {3.2}section}{26}{subsubsection.6.3.2}
+\contentsline {subsection}{\numberline {4}referencing}{26}{subsection.6.4}
+\contentsline {subsection}{\numberline {5}algorithms}{26}{subsection.6.5}
+\contentsline {subsection}{\numberline {6}source code}{26}{subsection.6.6}
