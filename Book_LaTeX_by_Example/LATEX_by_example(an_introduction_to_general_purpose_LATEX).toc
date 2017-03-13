@@ -47,6 +47,7 @@
 \contentsline {subsubsection}{\numberline {3.1}size}{26}{subsubsection.5.3.1}
 \contentsline {subsubsection}{\numberline {3.2}color}{26}{subsubsection.5.3.2}
 \contentsline {subsubsection}{\numberline {3.3}Fonts}{26}{subsubsection.5.3.3}
+\contentsline {subsubsection}{\numberline {3.4}boxed}{26}{subsubsection.5.3.4}
 \contentsline {section}{\numberline {VI}Advanced use of \LaTeX }{26}{section.6}
 \contentsline {subsection}{\numberline {1}자동 조사}{26}{subsection.6.1}
 \contentsline {subsection}{\numberline {2}참고 문헌 삽입}{26}{subsection.6.2}
