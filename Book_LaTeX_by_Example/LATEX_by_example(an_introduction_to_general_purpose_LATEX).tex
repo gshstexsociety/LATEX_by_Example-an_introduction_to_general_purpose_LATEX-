@@ -12,6 +12,8 @@
 \usepackage{tabularx}
 \usepackage{xfrac}
 \usepackage{tikz}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
 \usepackage[firstpage]{draftwatermark}
 \usepackage[hidelinks]{hyperref}
 \usepackage[group-separator={,}]{siunitx} %si unit
@@ -1184,10 +1186,67 @@
 		\hline
 	\end{tabularx}
 	\subsection{Formatting Equations}
+	여러분은 문서를 작성 할 때에 수식을 강조를 할 때가 있을 것이다. \LaTeX 에서는 수식에 여러가지 색, 폰트, 크기를 적용 할 수 있다.
 	\subsubsection{size}
+	수식 환경안에서 크기 조절을 하는 스트립트는 다음과 같다.\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|X|}
+		\hline
+		\textbackslash displaystyle asdf&\(\displaystyle asdf\)\\
+		\hline
+		\textbackslash textstyle asdf&\(\textstyle asdf \)\\
+		\hline
+		\textbackslash scriptstyle asdf&\(\scriptstyle asdf \)\\
+		\hline
+		\textbackslash scriptscriptstyle asdf&\(\scriptscriptstyle asdf \)\\
+		\hline
+	\end{tabularx}
+	\clearpage
 	\subsubsection{color}
+	수식에 색을 넣고 싶다면 \textbf{xcolor}패키지를 이용하여 다음과 같이 사용하면 된다.\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|X|}
+		\hline
+		f(\{\textbackslash color\{red\}\}x)=x-2&\(f({\color{red}x})=x-2\)\\
+		\hline
+	\end{tabularx}
 	\subsubsection{Fonts}
+	수식에는 기본으로 제공이 되는 다양한 폰트가 존재한다. 마지막 두 폰트를 제외하고 별다른 패키지 없이 사용 할 수 있다.\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|X|}
+		\hline
+		\textbackslash mathnormal\{asdf1234\}&\(\mathnormal{asdf1234}\)\\
+		\hline
+		\textbackslash mathnormal\{asdf1234\}&\(\mathrm{asdf1234}\)\\
+		\hline
+		\textbackslash mathnormal\{asdf1234\}&\(\mathit{asdf1234}\)\\
+		\hline
+		\textbackslash mathnormal\{asdf1234\}&\(\mathbf{asdf1234}\)\\
+		\hline
+		\textbackslash mathnormal\{asdf1234\}&\(\mathsf{asdf1234}\)\\
+		\hline
+		\textbackslash mathnormal\{asdf1234\}&\(\mathtt{asdf1234}\)\\
+		\hline
+		\textbackslash mathnormal\{asdf1234\}&\(\mathfrak{asdf1234}\)\\
+		\hline
+		\textbackslash mathnormal\{asdf1234\}&\(\mathcal{ASDF}\)\\
+		\hline
+		\textbackslash mathnormal\{asdf1234\}&\(\mathbb{ASDF}\)\\
+		\hline
+		\textbackslash mathnormal\{asdf1234\}&\(\mathscr{ASDF}\)\\
+		\hline
+	\end{tabularx}\newline\newline
+	위의 예시에서 볼 수가 있듯이 밑 3 예시는 영문 대문자만 가능한 폰트이며, 마지막 두 폰트는 순서대로 \textbf{amafonts}와 \textbf{mathrsfs} 패키지를 사용하면 된다.
 	\subsubsection{boxed}
+	수식에 테두리를 적용하는 방법은 수식 환경 내에서 다음과 같이 스크립트를 입력하면 된다.\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|X|}
+		\hline
+		\textbackslash boxed\{x\textasciicircum2+y\textasciicircum2=4\}&\[\boxed{x^2+y^2=4}\]\\
+		\hline
+		\multicolumn{2}{|l|}{	\%\textbf{align}환경 안에서는 \textbackslash Aboxed\{\}를 사용하면 된다.}\\
+		\hline
+	\end{tabularx}\clearpage
 	\section{Advanced use of \LaTeX}
 	\subsection{자동 조사}
 	\subsection{참고 문헌 삽입}
@@ -1197,4 +1256,8 @@
 	\subsection{referencing}
 	\subsection{algorithms}
 	\subsection{source code}
+	\subsection{hot keys}
+	ctrl+b bold
+	ctrl+i italic
+	ctrl+enter \textbackslash\textbackslash
 \end{document}
