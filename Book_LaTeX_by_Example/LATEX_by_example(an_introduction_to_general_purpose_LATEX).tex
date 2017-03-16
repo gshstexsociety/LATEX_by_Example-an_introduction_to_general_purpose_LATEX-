@@ -13,9 +13,11 @@
 \usepackage{xfrac}
 \usepackage{tikz}
 \usepackage{amsfonts}
+\usepackage{listings}
 \usepackage{mathrsfs}
 \usepackage[firstpage]{draftwatermark}
 \usepackage[hidelinks]{hyperref}
+\usepackage[]{algorithm2e}
 \usepackage[group-separator={,}]{siunitx} %si unit
 
 % \usepackage[hangul]{kotex} 이걸로하면 Abstract, Contents 등이 전부 요약, 내용 등으로 바뀜.
@@ -64,7 +66,7 @@
 			GENERAL PURPOSE \LaTeX
 			
 			
-		\normalsize	\onehalfspacing ver 0.2.3
+		\normalsize	\onehalfspacing ver 1.0.0
 	\end{flushright}
 	
 	\SetWatermarkAngle{0}
@@ -1298,9 +1300,6 @@
 		\hline
 	\end{tabularx}\newline\newline
 	bibitem\{\}안의 내용을 기억하기 쉽게, 예로 주저자의 last name과 출판 년도를 사용하면 표기를 한다. \textbf{(ex: bibitem\{choi17\})}
-	\subsection{customize marking}
-	\subsubsection{footnote}
-	\subsubsection{section}
 	\clearpage
 	\subsection{referencing}
 	\subsubsection{labeling}
@@ -1330,10 +1329,69 @@
 		\textbackslash ref\{sam:sample\}\\
 		\hline
 	\end{tabularx}
+	\clearpage
 	\subsection{algorithms}
+	정보와 같은 과목의 시행절차는 다음과 같이 알고리즘 시리즈로 나열하면 전하고자 하는 알고리즘을 효과적으로 전달을 할 수가 있다.\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|X|}
+		\hline
+		\textbackslash begin\{algorithm\}[H]
+		
+		\ \ \ \textbackslash KwData\{Learnig \TeX\}
+		
+		\ \ \ \textbackslash KwResult\{Learned \TeX\}
+		
+		\ \ \ \textbackslash While\{using \TeX\}\{
+		
+		\ \ \ \ \ \ use what you know\textbackslash;
+				
+		\ \ \ \ \ \ \textbackslash eIf\{you don't know sth\}\{
+				
+		\ \ \ \ \ \ \textbackslash eIf\{It is described in this book\}
+		
+		\ \ \ \ \ \ \ \ \ \{Learn from this book\textbackslash;\}
+		
+		\ \ \ \ \ \ \ \ \ \{Ask Google\textbackslash;\}
+				
+		\ \ \ \ \ \ \}\{keep going\textbackslash;\}
+		
+		\ \ \ \}
+		
+		\textbackslash end\{algorithm\}
+		&
+		\begin{algorithm}[H]
+			\KwData{Learnig \TeX}
+			\KwResult{Learned \TeX}
+			\While{using \TeX}{
+				use what you know\;
+				\eIf{you don't know sth}{\eIf{It is described in this book}{Learn from this book\;}{Ask Google\;}}{keep going\;}
+			}
+		\end{algorithm}\\
+		\hline
+	\end{tabularx}\newline\newline
+	여기에서는 알고리즘 입력 외에 또 더 중요한 것을 다루고 있다. \TeX 를 사용하면서 모르는 것이 나오는 것은 당연하다. 명령어를 모를 수 있고, 또는 컴파일을 할 때에 나오는 에러가 무엇인지 모를 수도 있다. \textbf{이때는 우리의 친구 Google에게 물어보도록 하자}.
 	\subsection{source code}
-	\subsection{hot keys}
-	ctrl+b bold
-	ctrl+i italic
-	ctrl+enter \textbackslash\textbackslash
+	우리의 긴 여행의 마지막 \TeX 에서 소스 코드 입력하지 이다. 소스코드를 입력하는데에는 두가지 방법이 있으며 \textbf{listings}패키지를 사용한다. 그 중 첫번째 예시는 다음과 같다.\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|}
+		\hline
+		\textbackslash begin\{tabularx\}\{\textbackslash textwidth\}\{\textbar X\textbar X\textbar\}\\
+		\hline
+	\end{tabularx}
+	\begin{lstlisting}
+	\begin{tabularx}{\textwidth}{|X|X|}
+	\end{lstlisting}
+	\clearpage
+	만약 코드 파일이 있다면 다음과 같은 방법을 이용하는 것을 추천한다.\newline
+	
+	\begin{tabularx}{\textwidth\onehalfspacing}{|X|}
+		\hline
+		\textbackslash lstinputlisting[language=TeX, firstline=1, lastline=]\{example\_source.py\}\\
+		\hline
+	\end{tabularx}\newline\newline
+	이것을 지원하는 언어 목록들은 다음과 같다:
+	
+	ABAP, ACSL, Ada, Algol, Ant, Assembler, Awk, bash, Basic, C#, \textbf{C++}, \textbf{C}, Caml, Clean, Cobol, Comal, csh, Delphi, Eiffe, Elan, erlang, Euphoria, Fortran, GCL, Gnuplot, Haskell, \textbf{HTML}, IDL, inform, \textbf{Java} JVMIS, ksh, Lisp, Logo, Lua, make, \textbf{Mathematica}, \textbf{Matlab}, Mercury, MetaPost, Miranda, Mizar, ML, Modelica, Modula-2, MuPAD, NASTRAN, Oberon-2, \textbf{Objective C} , OCL, Octave, Oz, Pascal, Perl, PHP, PL/I, Plasm, POV, Prolog, Promela, \textbf{Python}, R, Reduce, Rexx, RSL, Ruby, S, SAS, Scilab, sh, SHELXL, Simula, SQL, tcl, \textbf{TeX}, VBScript, Verilog, VHDL, VRML, XML, XSLT.
+	\section{마치며}
+	이 책을 \TeX 공부를 하면서 경기과학고등학교 텍 사용자 협회의 예시 자료들이 주로 pdf와 TeX 파일을 같이 보아야 하게 되어 있어 인쇄를 하여 사용 할 수도 있고, 이 문서 자체로도 텍을 사용 배울 수 있도록 이 책을 만들게 되었다. 초본은 총 2주에 걸쳐 제작이 되었으며 이젠 우리 2기 다음의 3 ,4보다 더 많이 텍 협회가 이어지고 이 책에 더 많은 내용이 추가가 되기를 바란다.
 \end{document}
